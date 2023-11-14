@@ -1,17 +1,18 @@
 import * as React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Game from "../components/wordle/Game"
 import Seo from "../components/seo"
+import { AlertProvider } from '../context/AlertContext'
 
-const SecondPage = () => (
-  <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+const JillsCard1 = () => (
+  <AlertProvider>
+    <Game
+      link={'https://support.apple.com/en-us/HT201209'}
+      solution={'BUTTS'}
+    />
+  </AlertProvider>
 )
 
-export const Head = () => <Seo title="Page two" />
+export const Head = () => <Seo title="Test" />
 
-export default SecondPage
+export default JillsCard1
