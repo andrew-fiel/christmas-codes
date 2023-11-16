@@ -8,21 +8,19 @@ export type StoredGameState = {
 export const saveGameStateToSessionStorage = (
   gameState: StoredGameState
 ) => {
-  if (sessionStorage) {
+  if (typeof window !== 'undefined') {
     sessionStorage.setItem(gameStateKey, JSON.stringify(gameState))
   }
 }
 
 export const loadGameStateFromSessionStorage = () => {
   let state;
-  if (sessionStorage) {
-  state = sessionStorage.getItem(gameStateKey)
+  if (typeof window !== 'undefined') {
+    state = window.sessionStorage.getItem(gameStateKey)
   }
   return state ? (JSON.parse(state) as StoredGameState) : null
 }
 
 export const clearGameStateFromSessionStorage = () => {
-  if (sessionStorage) {
-    sessionStorage.removeItem(gameStateKey)
-  }
+  typeof window !== 'undefined' && window.sessionStorage.removeItem(gameStateKey)
 }
