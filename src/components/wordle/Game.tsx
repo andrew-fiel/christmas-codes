@@ -39,14 +39,17 @@ import {
 } from '../../lib/words'
 
 type Props = {
-    solution: string
-    link: string
+    word: string
+    destination: string
+    player: string
 }
 
 const Game = ({
-    solution,
-    link
+    word,
+    destination,
+    player
 }: Props) => {
+  const solution = word.toUpperCase()
   const { showError: showErrorAlert, showSuccess: showSuccessAlert } =
     useAlert()
   const [currentGuess, setCurrentGuess] = useState('')
@@ -230,7 +233,8 @@ const Game = ({
           <EndModal
             isOpen={isEndModalOpen}
             handleClose={() => setIsEndModalOpen(false)}
-            rewardLink={link}
+            rewardLink={destination}
+            player={player}
           />
           <AlertContainer />
         </div>

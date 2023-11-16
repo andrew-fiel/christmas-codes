@@ -10,16 +10,18 @@ type Props = {
   isOpen: boolean
   handleClose: () => void
   rewardLink: string
+  player: string
 }
 
 export const EndModal = ({
   isOpen,
   handleClose,
   rewardLink,
+  player
 }: Props) => {
   return (
     <BaseModal
-    title={END_TITLE}
+    title={`${END_TITLE} ${player}!`}
     isOpen={isOpen}
     handleClose={handleClose}
     >

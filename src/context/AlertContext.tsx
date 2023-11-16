@@ -55,8 +55,6 @@ import {
           onClose,
           durationMs = ALERT_TIME_MS,
         } = options || {}
-
-        console.log('frick me right in the shire hyuck')
   
         setTimeout(() => {
           setStatus(showStatus)
@@ -78,7 +76,6 @@ import {
   
     const showError = useCallback(
       (newMessage: string, options?: ShowOptions) => {
-        console.log('frick me right in the shire hole')
         show('error', newMessage, options)
       },
       [show]
