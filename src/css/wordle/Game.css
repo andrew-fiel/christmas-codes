@@ -339,7 +339,7 @@ svg.cursor-pointer:hover {
   border-radius: 20px 20px 60px 60px;
   background-position: 0 0, 0 0;
   background-repeat: repeat-x;
-  background: url("../../images/alcohol-1.svg"), url("../../images/alcohol-2.svg");
+  background: url("../../../static/alcohol-1.svg"), url("../../../static/alcohol-2.svg");
   animation: coffee 4s infinite linear;
 }
 @keyframes coffee {
