@@ -305,3 +305,61 @@ svg.cursor-pointer:hover {
 .react-datepicker__day--range-end {
   @apply bg-indigo-600 text-white hover:bg-white hover:text-gray-700;
 }
+
+.back {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #faf0ca;
+}
+
+.lame-text {
+  height:65vh;
+  width: 100%;
+  text-align: center;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:80px;
+  color: #030303;
+  position: absolute;
+  top: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cup {
+  height: 400px;
+  width: 220px;
+  border: 10px solid #030303;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50%;
+  border-radius: 20px 20px 60px 60px;
+  background-position: 0 0, 0 0;
+  background-repeat: repeat-x;
+  background: url("../../images/alcohol-1.svg"), url("../../images/alcohol-2.svg");
+  animation: coffee 4s infinite linear;
+}
+@keyframes coffee {
+  100% {
+    background-position: -100% 0, -100% 0;
+  }
+}
+.cup:after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 300px;
+  background-color: #030303;
+  left: -45px;
+  bottom: -10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .lame-text {
+    font-size:50px;
+  }
+}

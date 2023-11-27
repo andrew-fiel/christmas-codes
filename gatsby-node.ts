@@ -19,6 +19,8 @@ exports.createPages = ({ actions }) => {
     destination: string,
   }
 
+  const SHARED_LIZ_PATH = '/smh';
+
   const pages: Page[] = [
     {
       url: '/pygoscelis',
@@ -43,6 +45,12 @@ exports.createPages = ({ actions }) => {
       player: 'Jennie',
       word: 'glass',
       destination: 'https://glassartkalamazoo.org/'
+    },
+    {
+      url: '/megadyptes',
+      player: 'Liz',
+      word: 'booze',
+      destination: SHARED_LIZ_PATH
     }
   ]
 
@@ -57,4 +65,12 @@ exports.createPages = ({ actions }) => {
       },
     })
   )
+
+  createPage({
+    path: SHARED_LIZ_PATH,
+    component: path.resolve('./src/templates/FauxTicket.tsx'),
+    context: {
+      text: '1 Free Drink'
+    },
+  })
 }

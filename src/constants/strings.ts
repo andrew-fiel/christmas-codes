@@ -17,7 +17,7 @@ export const NOT_CONTAINED_MESSAGE = (letter: string) =>
 export const ENTER_TEXT = 'Enter'
 export const DELETE_TEXT = 'Delete'
 export const END_TITLE = 'Merry Christmas'
-export const END_DESCRIPTION = 'Follow the link to find out where your gift card goes'
+export const END_DESCRIPTION = 'Follow the link to find out what your gift is'
 export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_WORD_TEXT = 'New word in'
 export const SHARE_TEXT = 'Share'
