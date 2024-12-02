@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.unclickable {
+	pointer-events: none;
+}
+
+.logo {
+	font-family: "DM Serif Display", serif;
+	color: white;
+	font-size: 8rem;
+	letter-spacing: 0.5rem;
+	padding: 0;
+	margin: 0;
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50vh;
+	animation: fadeIn 2.4s ease-in-out;
+	transition: all 2s ease-in-out;
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.intro--disappear {
+	animation: fadeOut 1s ease-in-out forwards;
+	pointer-events: none;
+}
+
+.intro--disappear .logo {
+	top: 42px;
+	transform: scale(0.25);
+	transform-origin: center;
+	pointer-events: none;
+}
+
+.explore {
+	padding: 1rem 1rem;
+	border: none;
+	font-family: "DM Serif Display", serif;
+	font-size: 1.25rem;
+	letter-spacing: 0.25rem;
+	color: white;
+	border-radius: 32px;
+	cursor: pointer;
+	display: inline-block;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	transition: 0.42s ease-in-out;
+	animation: fadeIn 0.2s ease-in-out 0.3s forwards;
+	opacity: 0;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+	.logo {
+	  font-size: 3rem;
+	  letter-spacing: 0.25rem;
+	}
+
+	.intro--disappear .logo {
+	  top: 24px;
+	  transform: scale(0.5);
+	  transform-origin: center;
+	  pointer-events: none;
+	}
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

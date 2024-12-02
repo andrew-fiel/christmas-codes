@@ -73,4 +73,10 @@ exports.createPages = ({ actions }) => {
       text: '1 Free Drink'
     },
   })
+
+  createPage({
+    path: 'mysterium',
+    component: path.resolve('./src/templates/AnEncounter.tsx'),
+    context: {},
+  })
 }
